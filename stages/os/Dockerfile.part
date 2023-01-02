@@ -104,3 +104,7 @@ RUN mkdir /tmp/linux-profile \
 COPY stages/os/pistat /usr/local/bin/
 
 COPY stages/os/pkg-install /usr/local/bin/
+
+RUN git clone https://github.com/fbwang/kvmd.git \
+	&& cd kvmd \
+	&& make release
